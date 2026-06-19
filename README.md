@@ -1,15 +1,16 @@
 <h1 align="center">Anthony Skenter</h1>
 
 <p align="center">
-  Aerospace MEng from Imperial College London. Founder of <a href="https://github.com/Askenter">Aevori</a>.
+  Aerospace MEng from Imperial College London. Founder of <a href="https://aevori.net">Aevori</a>.
   <br/>
-  I build reinforcement learning simulators and ship applied AI into production.
+  I build GPU parallel reinforcement learning simulators for robotics and embodied AI. Through Aevori I ship production AI systems for clients across Greece and the EU.
 </p>
 
 <p align="center">
+  <a href="https://anthonyskenter.com/essays/flyby"><img src="https://img.shields.io/badge/Imperial%20College%20London-Aerospace%20MEng-003E74?style=flat-square&logoColor=white" alt="Imperial College London, Aerospace MEng"/></a>
   <a href="https://x.com/AntonisIoanno17"><img src="https://img.shields.io/badge/X-%40AntonisIoanno17-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
   <a href="https://www.linkedin.com/in/anthony-skenter"><img src="https://img.shields.io/badge/LinkedIn-anthony--skenter-0a66c2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <img src="https://img.shields.io/badge/Based%20in-London%20%26%20Greece-1b3a5c?style=flat-square" alt="Location"/>
+  <img src="https://img.shields.io/badge/Based%20in-London%20%2F%20Athens-1b3a5c?style=flat-square" alt="Location"/>
 </p>
 
 ---
@@ -26,8 +27,13 @@
 |---|---|
 | [**claude-journal-tools**](https://github.com/Askenter/claude-journal-tools) | Tooling for a persistent knowledge base that survives across machines and sessions. |
 | [**ARC**](https://github.com/Askenter/ARC) | Architecture Repository Companion. Connect any git repo and explore its MBSE view through a notebook style dashboard with a Claude agent at your side. |
-| [**SINDy-RL**](https://github.com/Askenter/SINDy-RL-ASKENTER) | The FlyBy research line. GPU parallel RL simulation for training drones to fly. |
+| [**FlyBy**](https://github.com/Askenter/SINDy-RL-ASKENTER) | GPU parallel RL simulation for training drones to fly. [Read the write-up](https://anthonyskenter.com/essays/flyby). |
 | [**ASEP**](https://github.com/Askenter/ASEP) | Production chatbot for Greece's civil service recruitment authority. |
+
+### Writing
+
+- [**Escaping the AI amnesia**](https://anthonyskenter.com/essays/claude-journal). Giving an AI assistant a memory that survives across machines and sessions.
+- [**FlyBy**](https://anthonyskenter.com/essays/flyby). My Imperial thesis on GPU parallel reinforcement learning for quadrotors, written up for the web.
 
 ### Toolbox
 
@@ -40,9 +46,5 @@
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
 </p>
-
-### Activity
-
-[![Anthony's contribution graph](https://ghchart.rshah.org/1b3a5c/Askenter)](https://github.com/Askenter)
 
 <p align="center"><sub>Exploring where RL simulation and training actually bottleneck teams. Reach out if that is your world.</sub></p>
