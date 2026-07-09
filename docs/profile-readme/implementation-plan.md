@@ -424,10 +424,13 @@ def test_repo_loc_retries_202_then_succeeds(monkeypatch):
     assert sleeps == [1, 2]
 
 
-def test_repo_loc_gives_up_after_five_202s(monkeypatch):
+def test_repo_loc_gives_up_after_five_202s_without_final_sleep(monkeypatch):
+    sleeps = []
     monkeypatch.setattr(update_profile.requests, "get", lambda *a, **k: FakeResponse(202))
-    with pytest.raises(StatsPending):
-        repo_loc("tok", "Askenter/x", "Askenter", sleep=lambda s: None)
+    with pytest.raises(StatsPending) as exc_info:
+        repo_loc("tok", "Askenter/x", "Askenter", sleep=sleeps.append)
+    assert sleeps == [1, 2, 4, 8]
+    assert "Askenter/x" not in str(exc_info.value)
 
 
 def test_repo_loc_rate_limit_exhausted_raises(monkeypatch):
@@ -586,12 +589,13 @@ def repo_loc(token: str, name_with_owner: str, login: str, sleep=time.sleep) -> 
                     return adds, dels
             return 0, 0
         if response.status_code == 202:
-            sleep(2 ** attempt)
+            if attempt < 4:
+                sleep(2 ** attempt)
             continue
         if response.status_code == 204:
             return 0, 0
         raise ApiError(f"stats HTTP {response.status_code} for a repo")
-    raise StatsPending(name_with_owner)
+    raise StatsPending("contributor stats pending for a repo")
 
 
 def fetch_loc(token: str, repos: list[dict], cache: dict, login: str) -> tuple[int, int, dict]:
@@ -616,7 +620,7 @@ def fetch_loc(token: str, repos: list[dict], cache: dict, login: str) -> tuple[i
     return adds, dels, new_cache
 ```
 
-Note the error text in `repo_loc` deliberately omits the repo name so private names never reach workflow logs.
+Note both error texts in `repo_loc` (the `ApiError` and the `StatsPending`) deliberately omit the repo name so private names never reach public workflow logs, and no sleep happens after the final attempt since nothing follows it.
 
 - [ ] **Step 4: Run tests to verify they pass**
 
