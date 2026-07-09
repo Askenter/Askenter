@@ -11,3 +11,11 @@ def age_string(birthday: date, today: date) -> str:
         suffix = "" if amount == 1 else "s"
         parts.append(f"{amount} {unit}{suffix}")
     return ", ".join(parts)
+
+
+ROW_WIDTH = 58
+
+
+def dots_for(label: str, value: str, row_width: int = ROW_WIDTH) -> str:
+    count = row_width - len(label) - len(value) - 1
+    return "." * max(count, 3)
