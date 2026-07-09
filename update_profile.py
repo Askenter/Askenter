@@ -1,9 +1,12 @@
 """Daily profile updater. Rewrites stats inside dark_mode.svg and light_mode.svg."""
+import argparse
 import hashlib
 import json
+import os
 import re
 import time
 import requests
+from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -190,3 +193,86 @@ def fetch_loc(token: str, repos: list[dict], cache: dict, login: str) -> tuple[i
         adds += entry["add"]
         dels += entry["del"]
     return adds, dels, new_cache
+
+
+@dataclass
+class Stats:
+    age: str
+    repos: int
+    contributed: int
+    stars: int
+    commits: int
+    followers: int
+    loc_add: int
+    loc_del: int
+
+    @property
+    def loc_net(self) -> int:
+        return self.loc_add - self.loc_del
+
+
+def build_replacements(stats: Stats) -> dict[str, str]:
+    commit_value = f"{stats.commits:,}"
+    commit_tail = f"{commit_value} | Followers: {stats.followers:,}"
+    return {
+        "age_data": stats.age,
+        "age_dots": dots_for(". Uptime: ", stats.age),
+        "repo_data": f"{stats.repos:,}",
+        "contrib_data": f"{stats.contributed:,}",
+        "star_data": f"{stats.stars:,}",
+        "commit_dots": dots_for(". Commits: ", commit_tail),
+        "commit_data": commit_value,
+        "follower_data": f"{stats.followers:,}",
+        "loc_data": f"{stats.loc_net:,}",
+        "loc_add": f"{stats.loc_add:,}++",
+        "loc_del": f"{stats.loc_del:,}--",
+    }
+
+
+def collect_stats(token: str, birthday: date, today: date) -> tuple[Stats, dict]:
+    viewer = fetch_overview(token)
+    repos = fetch_repos(token)
+    cache = load_cache(CACHE_PATH)
+    adds, dels, new_cache = fetch_loc(token, repos, cache, viewer["login"])
+    stats = Stats(
+        age=age_string(birthday, today),
+        repos=len(repos),
+        contributed=viewer["repositoriesContributedTo"]["totalCount"],
+        stars=sum(repo["stargazerCount"] for repo in repos),
+        commits=fetch_commits_total(token, viewer["createdAt"], today),
+        followers=viewer["followers"]["totalCount"],
+        loc_add=adds,
+        loc_del=dels,
+    )
+    return stats, new_cache
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dry-run", action="store_true", help="print values, write nothing")
+    args = parser.parse_args(argv)
+
+    token = os.environ["PROFILE_TOKEN"]
+    birthday = date.fromisoformat(os.environ["BIRTHDAY"])
+    stats, new_cache = collect_stats(token, birthday, date.today())
+    replacements = build_replacements(stats)
+
+    if args.dry_run:
+        for key, value in replacements.items():
+            print(f"{key:15} {value}")
+        return 0
+
+    changed = False
+    for svg_path in (Path("dark_mode.svg"), Path("light_mode.svg")):
+        old = svg_path.read_text()
+        new = update_svg(old, replacements)
+        if new != old:
+            svg_path.write_text(new)
+            changed = True
+    save_cache(CACHE_PATH, new_cache)
+    print("updated" if changed else "no change")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
