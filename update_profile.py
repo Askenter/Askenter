@@ -161,12 +161,13 @@ def repo_loc(token: str, name_with_owner: str, login: str, sleep=time.sleep) -> 
                     return adds, dels
             return 0, 0
         if response.status_code == 202:
-            sleep(2 ** attempt)
+            if attempt < 4:
+                sleep(2 ** attempt)
             continue
         if response.status_code == 204:
             return 0, 0
         raise ApiError(f"stats HTTP {response.status_code} for a repo")
-    raise StatsPending(name_with_owner)
+    raise StatsPending("contributor stats pending for a repo")
 
 
 def fetch_loc(token: str, repos: list[dict], cache: dict, login: str) -> tuple[int, int, dict]:

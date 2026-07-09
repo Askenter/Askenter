@@ -48,10 +48,13 @@ def test_repo_loc_retries_202_then_succeeds(monkeypatch):
     assert sleeps == [1, 2]
 
 
-def test_repo_loc_gives_up_after_five_202s(monkeypatch):
+def test_repo_loc_gives_up_after_five_202s_without_final_sleep(monkeypatch):
+    sleeps = []
     monkeypatch.setattr(update_profile.requests, "get", lambda *a, **k: FakeResponse(202))
-    with pytest.raises(StatsPending):
-        repo_loc("tok", "Askenter/x", "Askenter", sleep=lambda s: None)
+    with pytest.raises(StatsPending) as exc_info:
+        repo_loc("tok", "Askenter/x", "Askenter", sleep=sleeps.append)
+    assert sleeps == [1, 2, 4, 8]
+    assert "Askenter/x" not in str(exc_info.value)
 
 
 def test_repo_loc_rate_limit_exhausted_raises(monkeypatch):
