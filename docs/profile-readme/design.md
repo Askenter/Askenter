@@ -86,7 +86,7 @@ Every dynamic value sits in its own `<tspan>` with a stable id (`age_data`, `rep
 
 1. Computes age from `BIRTHDAY` env value with `dateutil.relativedelta`, rendered as `N years, N months, N days`.
 2. Queries the GitHub GraphQL API as the token owner for owned repo count, stars across owned repos, total commit contributions (all time, via `contributionsCollection` per year range), follower count, and count of repositories contributed to.
-3. Lines of code come from the REST endpoint `/repos/{owner}/{repo}/stats/contributors` for every owned repo, summing additions and deletions authored by `Askenter`. Results are cached per repo in `cache/loc_cache.json` keyed by pushed_at, so unchanged repos are never refetched.
+3. Lines of code come from the REST endpoint `/repos/{owner}/{repo}/stats/contributors` for every owned repo, summing additions and deletions authored by `Askenter`. Results are cached per repo in `cache/loc_cache.json`, and unchanged repos (same pushed_at) are never refetched. Cache keys are SHA256 hashes of the repo name, never the name itself, because the cache file is committed to the public repo and must not leak private repo names.
 4. Rewrites the identified tspans in both SVGs, recomputing dot leader lengths so columns stay aligned.
 5. Writes files only when at least one value changed. The workflow commits only when git reports a diff.
 
