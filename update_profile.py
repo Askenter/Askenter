@@ -1,9 +1,30 @@
 """Daily profile updater. Rewrites stats inside dark_mode.svg and light_mode.svg."""
+import hashlib
+import json
 import re
 from datetime import date
+from pathlib import Path
 from xml.sax.saxutils import escape
 
 from dateutil.relativedelta import relativedelta
+
+
+CACHE_PATH = Path("cache/loc_cache.json")
+
+
+def cache_key(name_with_owner: str) -> str:
+    return hashlib.sha256(name_with_owner.encode()).hexdigest()
+
+
+def load_cache(path: Path) -> dict:
+    if path.exists():
+        return json.loads(path.read_text())
+    return {}
+
+
+def save_cache(path: Path, cache: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(cache, indent=0, sort_keys=True) + "\n")
 
 
 def age_string(birthday: date, today: date) -> str:
