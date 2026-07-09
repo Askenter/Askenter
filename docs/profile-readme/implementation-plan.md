@@ -929,8 +929,10 @@ if __name__ == "__main__":
 
 - [ ] **Step 3: Generate the fragment**
 
-Run: `.venv/bin/python ascii_portrait.py ~/Downloads/avatar.png --cols 40 -o portrait_fragment.svg`
-Expected: `wrote portrait_fragment.svg (~28 rows x 40 cols)`. Row count varies with the avatar's aspect ratio; anything between 20 and 35 is fine.
+If the avatar's transparency is baked in as opaque checkerboard pixels (check with `getchannel("A").getextrema()`, real alpha varies), first clean it with the committed helper: `.venv/bin/python clean_avatar.py ~/Downloads/avatar.png ~/Downloads/avatar_clean.png` (border flood fill keying out near-grey border connected pixels), then generate from the cleaned copy.
+
+Run: `.venv/bin/python ascii_portrait.py ~/Downloads/avatar_clean.png --cols 48 -o portrait_fragment.svg`
+Expected: `wrote portrait_fragment.svg (~28 rows x 48 cols)`. Row count varies with the avatar's aspect ratio; anything between 20 and 35 is fine.
 
 - [ ] **Step 4: Eyeball the raw fragment**
 
