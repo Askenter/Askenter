@@ -10,4 +10,4 @@
   <a href="mailto:ioannouskenter@gmail.com">Email</a>
 </p>
 
-<sub>Layout inspired by <a href="https://github.com/Andrew6rant">Andrew6rant</a>. Pipeline documented in <a href="docs/profile-readme">docs/profile-readme</a>.</sub>
+<sub>Pipeline documented in <a href="docs/profile-readme">docs/profile-readme</a>.</sub>
