@@ -75,12 +75,15 @@ class StatsPending(ApiError):
 
 
 def gql(query: str, variables: dict, token: str) -> dict:
-    response = requests.post(
-        f"{API}/graphql",
-        json={"query": query, "variables": variables},
-        headers={"Authorization": f"bearer {token}"},
-        timeout=30,
-    )
+    try:
+        response = requests.post(
+            f"{API}/graphql",
+            json={"query": query, "variables": variables},
+            headers={"Authorization": f"bearer {token}"},
+            timeout=30,
+        )
+    except requests.RequestException:
+        raise ApiError("network error during GraphQL request") from None
     if response.status_code != 200:
         raise ApiError(f"GraphQL HTTP {response.status_code}: {response.text[:200]}")
     body = response.json()
@@ -152,7 +155,10 @@ def repo_loc(token: str, name_with_owner: str, login: str, sleep=time.sleep) -> 
     url = f"{API}/repos/{name_with_owner}/stats/contributors"
     headers = {"Authorization": f"bearer {token}", "Accept": "application/vnd.github+json"}
     for attempt in range(5):
-        response = requests.get(url, headers=headers, timeout=30)
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+        except requests.RequestException:
+            raise ApiError("network error fetching contributor stats") from None
         if response.status_code == 200:
             if int(response.headers.get("x-ratelimit-remaining", "1")) == 0:
                 raise ApiError("REST rate limit exhausted")

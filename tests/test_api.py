@@ -101,3 +101,26 @@ def test_fetch_loc_pending_without_cache_raises(monkeypatch):
     monkeypatch.setattr(update_profile, "repo_loc", pending)
     with pytest.raises(StatsPending):
         fetch_loc("tok", [repo], {}, "Askenter")
+
+
+def test_repo_loc_network_error_names_no_repo(monkeypatch):
+    def boom(*a, **k):
+        raise update_profile.requests.ConnectionError(
+            "Max retries exceeded with url: /repos/Askenter/secret-repo/stats/contributors"
+        )
+
+    monkeypatch.setattr(update_profile.requests, "get", boom)
+    with pytest.raises(ApiError) as exc_info:
+        repo_loc("tok", "Askenter/secret-repo", "Askenter")
+    assert "secret-repo" not in str(exc_info.value)
+    assert exc_info.value.__suppress_context__
+
+
+def test_gql_network_error_is_sanitized(monkeypatch):
+    def boom(*a, **k):
+        raise update_profile.requests.ConnectionError("connection refused")
+
+    monkeypatch.setattr(update_profile.requests, "post", boom)
+    with pytest.raises(ApiError) as exc_info:
+        gql("query {}", {}, "tok")
+    assert "connection refused" not in str(exc_info.value)

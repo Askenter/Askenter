@@ -72,7 +72,7 @@ The README body shrinks to a `<picture>` element with a `prefers-color-scheme: d
 
 ### SVG design
 
-Both SVGs share one geometry and differ only in palette. Monospace font stack (`Consolas, Menlo, monospace`), roughly 1000×540 viewBox, portrait block left, panel block right, matching the reference screenshot proportions.
+Both SVGs share one geometry and differ only in palette. Monospace font stack (`Consolas, Menlo, monospace`), 1000×500 viewBox, portrait block left, panel block right, matching the reference screenshot proportions.
 
 Dark palette. Background `#0d1117` (GitHub dark), field keys in orange `#ffa657`, values in light grey `#c9d1d9`, section rules in dim grey, additions in green `#3fb950`, deletions in red `#f85149`. Light palette mirrors the same roles on white `#ffffff` with GitHub light equivalents (`#953800` keys, `#24292f` values, `#1a7f37` additions, `#cf222e` deletions).
 
@@ -94,7 +94,7 @@ A `--dry-run` flag prints the rendered values and exits without touching the SVG
 
 ### Portrait pipeline
 
-`ascii_portrait.py` runs once, locally. It loads the avatar image, downsamples it to a character grid around 40 columns wide (final width tuned by eye against the panel height), maps each cell's luminance to a character ramp (` .,:;i1tfLCG08@`), quantizes each cell's color to the nearest of the avatar's palette classes, and emits SVG text lines with per class fills, ready to paste into both SVG templates. Transparent cells become spaces. The script stays in the repo for reproducibility.
+`ascii_portrait.py` runs once, locally. It loads the avatar image, downsamples it to a character grid around 40 columns wide (final width tuned by eye against the panel height), maps each cell's luminance to a character ramp (` .:-=+*#%@`), quantizes each cell's color to the nearest of the avatar's palette classes, and emits SVG text lines with per class fills, ready to paste into both SVG templates. Transparent cells become spaces. The script stays in the repo for reproducibility.
 
 ### Workflow and secrets
 

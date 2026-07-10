@@ -1195,7 +1195,7 @@ Expected: all tests pass.
 ```bash
 git add README.md .github/workflows/update-profile.yml docs/profile-readme/
 git commit -m "Replace profile README with SVG panel and add daily update workflow"
-git push origin main
+git push origin master
 ```
 
 - [ ] **Step 7: End to end verification**
