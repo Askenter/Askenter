@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-label="Anthony Skenter, ASCII portrait and GitHub stats">
+<style>
+  rect.bg { fill: #ffffff; }
+  text { font-family: "SFMono-Regular", Consolas, Menlo, monospace; font-size: 14px; fill: #24292f; }
+  g.portrait text { font-size: 12px; }
+  .k { fill: #953800; }
+  .v { fill: #24292f; }
+  .d { fill: #d0d7de; }
+  .rule { fill: #6e7781; }
+  .add { fill: #1a7f37; }
+  .del { fill: #cf222e; }
+  .h { fill: #24292f; } .s { fill: #b07d48; } .p { fill: #d6336c; }
+  .j { fill: #5c5f3d; } .c { fill: #3b5bdb; } .g { fill: #1a7f37; } .w { fill: #6e7781; }
+</style>
+<rect class="bg" width="1000" height="500"/>
+<g class="portrait">
+<!-- PORTRAIT -->
+<text x="30" y="60" xml:space="preserve">                       <tspan class="h">%@%%%%%@%</tspan>                </text>
+<text x="30" y="76" xml:space="preserve">                 <tspan class="h">@@@@%%%%#%%##%%@@@</tspan>             </text>
+<text x="30" y="92" xml:space="preserve">               <tspan class="h">%%%#%%%%%%%%%%##%@##%%</tspan>           </text>
+<text x="30" y="108" xml:space="preserve">              <tspan class="h">@%%%%%%%@@@%%%%%%%%%%%#%%</tspan>         </text>
+<text x="30" y="124" xml:space="preserve">            <tspan class="h">%@@%%%@@@@%</tspan><tspan class="j">**</tspan><tspan class="h">#######%@%%%#@%</tspan>        </text>
+<text x="30" y="140" xml:space="preserve">            <tspan class="h">%@%%%@@</tspan><tspan class="j">#**</tspan><tspan class="s">----------=</tspan><tspan class="j">*</tspan><tspan class="h">%@%%@%</tspan>        </text>
+<text x="30" y="156" xml:space="preserve">            <tspan class="h">%@%%@%</tspan><tspan class="j">+</tspan><tspan class="s">=-:::::::::::::</tspan><tspan class="p">+</tspan><tspan class="j">#</tspan><tspan class="h">@@</tspan>          </text>
+<text x="30" y="172" xml:space="preserve">              <tspan class="h">@%@%</tspan><tspan class="s">-:::::::::::::::-</tspan><tspan class="j">*</tspan><tspan class="h">@@</tspan>          </text>
+<text x="30" y="188" xml:space="preserve">              <tspan class="h">@@</tspan><tspan class="j">#+</tspan><tspan class="s">-------:::::-----</tspan><tspan class="j">+</tspan><tspan class="h">@</tspan>           </text>
+<text x="30" y="204" xml:space="preserve">            <tspan class="h">%%</tspan><tspan class="s">=</tspan><tspan class="h">#</tspan><tspan class="j">*</tspan><tspan class="s">=:</tspan><tspan class="j">++***+</tspan><tspan class="s">:::::</tspan><tspan class="j">+**+</tspan><tspan class="s">-</tspan><tspan class="j">+#</tspan>           </text>
+<text x="30" y="220" xml:space="preserve">            <tspan class="h">%%</tspan><tspan class="s">-</tspan><tspan class="p">+=</tspan><tspan class="s">=::</tspan><tspan class="p">=</tspan><tspan class="h">%%</tspan><tspan class="s">=-:::::</tspan><tspan class="j">#</tspan><tspan class="h">%</tspan><tspan class="j">#</tspan><tspan class="s">--=</tspan><tspan class="j">+</tspan><tspan class="h">@</tspan>          </text>
+<text x="30" y="236" xml:space="preserve">             <tspan class="h">#</tspan><tspan class="j">+</tspan><tspan class="s">===::=</tspan><tspan class="j">**</tspan><tspan class="s">-::::::</tspan><tspan class="j">***</tspan><tspan class="s">:-</tspan><tspan class="p">=</tspan><tspan class="j">*</tspan><tspan class="h">@</tspan>          </text>
+<text x="30" y="252" xml:space="preserve">              <tspan class="h">@%</tspan><tspan class="j">*</tspan><tspan class="s">=:::::::::-::::::-</tspan><tspan class="j">*</tspan><tspan class="h">@</tspan>           </text>
+<text x="30" y="268" xml:space="preserve">               <tspan class="h">%</tspan><tspan class="j">#</tspan><tspan class="s">=::::::::</tspan><tspan class="j">*#*</tspan><tspan class="s">:::::-</tspan><tspan class="j">*</tspan><tspan class="h">@</tspan>           </text>
+<text x="30" y="284" xml:space="preserve">               <tspan class="h">%%</tspan><tspan class="j">#</tspan><tspan class="s">-:::</tspan><tspan class="j">*</tspan><tspan class="s">-:::::::::-</tspan><tspan class="j">*</tspan><tspan class="h">#</tspan>            </text>
+<text x="30" y="300" xml:space="preserve">              <tspan class="h">@@@@</tspan><tspan class="j">+</tspan><tspan class="s">--::</tspan><tspan class="j">*####*</tspan><tspan class="s">:::-</tspan><tspan class="j">+</tspan><tspan class="h">#</tspan>             </text>
+<text x="30" y="316" xml:space="preserve">           <tspan class="h">%@@%%@@</tspan><tspan class="j">*#+</tspan><tspan class="s">-::::::::-</tspan><tspan class="p">=</tspan><tspan class="h">#@@</tspan>             </text>
+<text x="30" y="332" xml:space="preserve">           <tspan class="h">%%##%@%</tspan><tspan class="s">-=</tspan><tspan class="j">+#</tspan><tspan class="p">+=====</tspan><tspan class="j">+</tspan><tspan class="h">#%@@#%%%</tspan>           </text>
+<text x="30" y="348" xml:space="preserve">         <tspan class="h">@@%#</tspan><tspan class="c">##</tspan><tspan class="h">%%</tspan><tspan class="j">%#</tspan><tspan class="p">=</tspan><tspan class="s">--</tspan><tspan class="j">+++++++</tspan><tspan class="s">=</tspan><tspan class="h">%@@%#</tspan><tspan class="c">##</tspan><tspan class="h">#%</tspan>         </text>
+<text x="30" y="364" xml:space="preserve">    <tspan class="h">%@%%%%@%</tspan><tspan class="c">###</tspan><tspan class="h">%%</tspan><tspan class="p">#</tspan><tspan class="h">%</tspan><tspan class="j">*</tspan><tspan class="p">=</tspan><tspan class="s">-:::::---</tspan><tspan class="h">%%</tspan><tspan class="j">#</tspan><tspan class="h">@%#</tspan><tspan class="c">#*#</tspan><tspan class="h">#@</tspan>       </text>
+<text x="30" y="380" xml:space="preserve">  <tspan class="h">%%%#</tspan><tspan class="j">##</tspan><tspan class="h">#%%</tspan><tspan class="j">#</tspan><tspan class="c">#*#</tspan><tspan class="h">%%</tspan><tspan class="p">#*</tspan><tspan class="j">##**</tspan><tspan class="s">-:::-=</tspan><tspan class="j">*##</tspan><tspan class="p">#</tspan><tspan class="h">@%%#</tspan><tspan class="c">##</tspan><tspan class="j">#</tspan><tspan class="h">@%%@@</tspan>   </text>
+<text x="30" y="396" xml:space="preserve"><tspan class="h">%%#</tspan><tspan class="j">#****</tspan><tspan class="h">%%%</tspan><tspan class="c">####</tspan><tspan class="h">%@%</tspan><tspan class="p">*****</tspan><tspan class="h">#</tspan><tspan class="j">#</tspan><tspan class="s">=--</tspan><tspan class="p">=</tspan><tspan class="h">@</tspan><tspan class="j">#</tspan><tspan class="p">*#</tspan><tspan class="h">@%%#</tspan><tspan class="j">#</tspan><tspan class="h">%%%</tspan><tspan class="j">**#</tspan><tspan class="h">@</tspan>   </text>
+<text x="30" y="412" xml:space="preserve"><tspan class="h">@%</tspan><tspan class="j">#*#</tspan><tspan class="h">#%</tspan><tspan class="j">###</tspan><tspan class="h">%%%</tspan><tspan class="j">#</tspan><tspan class="c">#</tspan><tspan class="h">%%</tspan><tspan class="j">###%</tspan><tspan class="h">%%</tspan><tspan class="j">*</tspan><tspan class="g">+</tspan><tspan class="h">**</tspan><tspan class="j">*#</tspan><tspan class="h">%%%</tspan><tspan class="j">%</tspan><tspan class="p">#</tspan><tspan class="h">@%%@%#</tspan><tspan class="j">#****</tspan><tspan class="h">%%</tspan> </text>
+<text x="30" y="428" xml:space="preserve"><tspan class="h">@%</tspan><tspan class="j">##</tspan><tspan class="s">-</tspan><tspan class="w">::</tspan><tspan class="h">%#</tspan><tspan class="j">*#</tspan><tspan class="h">#%%#%%%</tspan><tspan class="p">#</tspan><tspan class="j">#</tspan><tspan class="p">#**</tspan><tspan class="j">*+</tspan><tspan class="g">=</tspan><tspan class="h">#</tspan><tspan class="j">#</tspan><tspan class="p">*#*#</tspan><tspan class="j">##</tspan><tspan class="h">@@@%</tspan><tspan class="j">#**##**</tspan><tspan class="h">%%</tspan> </text>
+<text x="30" y="444" xml:space="preserve"><tspan class="h">@%</tspan><tspan class="j">#</tspan><tspan class="h">#</tspan><tspan class="j">##</tspan><tspan class="h">#%#</tspan><tspan class="j">***#</tspan><tspan class="h">#@%%@</tspan><tspan class="p">#******</tspan><tspan class="g">=</tspan><tspan class="j">#</tspan><tspan class="p">**#****</tspan><tspan class="j">#</tspan><tspan class="h">%@#</tspan><tspan class="j">***####</tspan><tspan class="h">#%@</tspan></text>
+<text x="30" y="460" xml:space="preserve"><tspan class="h">@%#</tspan><tspan class="j">###</tspan><tspan class="h">##</tspan><tspan class="j">##****</tspan><tspan class="h">%%%#%</tspan><tspan class="p">#*****</tspan><tspan class="g">=</tspan><tspan class="j">#</tspan><tspan class="p">*++*****</tspan><tspan class="j">%</tspan><tspan class="h">@#</tspan><tspan class="j">***#</tspan><tspan class="h">##</tspan><tspan class="j">##</tspan><tspan class="h">#@</tspan></text>
+<text x="30" y="476" xml:space="preserve"><tspan class="h">@%#</tspan><tspan class="j">#######</tspan><tspan class="h">#</tspan><tspan class="j">***</tspan><tspan class="h">#%%#%</tspan><tspan class="p">#******</tspan><tspan class="j">#</tspan><tspan class="p">********</tspan><tspan class="h">%@%</tspan><tspan class="j">#**#####</tspan><tspan class="h">%@</tspan></text>
+<text x="30" y="492" xml:space="preserve"><tspan class="h">@%#</tspan><tspan class="j">***********#</tspan><tspan class="h">#%%%</tspan><tspan class="j">#</tspan><tspan class="p">***************</tspan><tspan class="h">%@%#</tspan><tspan class="j">##*****</tspan><tspan class="h">#%</tspan></text>
+<!-- /PORTRAIT -->
+</g>
+<g class="panel">
+<text x="400" y="60" xml:space="preserve"><tspan class="k">askenter@github</tspan> <tspan class="rule">────────────────────────────</tspan></text>
+<text x="400" y="84" xml:space="preserve"><tspan class="k">. OS: </tspan><tspan class="d">................</tspan><tspan class="v"> macOS, Linux</tspan></text>
+<text x="400" y="102" xml:space="preserve"><tspan class="k">. Uptime: </tspan><tspan class="d" id="age_dots">....................</tspan> <tspan class="v" id="age_data">24 years, 2 months, 23 days</tspan></text>
+<text x="400" y="120" xml:space="preserve"><tspan class="k">. Host: </tspan><tspan class="d">..............</tspan><tspan class="v"> Aevori (Founder)</tspan></text>
+<text x="400" y="138" xml:space="preserve"><tspan class="k">. Kernel: </tspan><tspan class="d">............</tspan><tspan class="v"> Aerospace MEng, Imperial College London</tspan></text>
+<text x="400" y="156" xml:space="preserve"><tspan class="k">. IDE: </tspan><tspan class="d">...............</tspan><tspan class="v"> VS Code, Claude Code</tspan></text>
+<text x="400" y="180" xml:space="preserve"><tspan class="k">. Languages.Programming: </tspan><tspan class="v">Python, TypeScript, C++</tspan></text>
+<text x="400" y="198" xml:space="preserve"><tspan class="k">. Languages.Computer: </tspan><tspan class="d">..</tspan><tspan class="v"> PyTorch, JAX, CUDA, FastAPI, Next.js</tspan></text>
+<text x="400" y="216" xml:space="preserve"><tspan class="k">. Languages.Real: </tspan><tspan class="d">......</tspan><tspan class="v"> English, Greek</tspan></text>
+<text x="400" y="240" xml:space="preserve"><tspan class="k">. Hobbies.Software: </tspan><tspan class="d">....</tspan><tspan class="v"> GPU parallel RL simulators</tspan></text>
+<text x="400" y="258" xml:space="preserve"><tspan class="k">. Hobbies.Hardware: </tspan><tspan class="d">....</tspan><tspan class="v"> Drones, embodied AI</tspan></text>
+<text x="400" y="282" xml:space="preserve"><tspan class="k">- Contact </tspan><tspan class="rule">──────────────────────────────────</tspan></text>
+<text x="400" y="306" xml:space="preserve"><tspan class="k">. Website: </tspan><tspan class="d">...........</tspan><tspan class="v"> anthonyskenter.com</tspan></text>
+<text x="400" y="324" xml:space="preserve"><tspan class="k">. LinkedIn: </tspan><tspan class="d">..........</tspan><tspan class="v"> anthony-skenter</tspan></text>
+<text x="400" y="342" xml:space="preserve"><tspan class="k">. X: </tspan><tspan class="d">.................</tspan><tspan class="v"> @AntonisIoanno17</tspan></text>
+<text x="400" y="360" xml:space="preserve"><tspan class="k">. Email: </tspan><tspan class="d">.............</tspan><tspan class="v"> ioannouskenter@gmail.com</tspan></text>
+<text x="400" y="384" xml:space="preserve"><tspan class="k">- GitHub Stats </tspan><tspan class="rule">─────────────────────────────</tspan></text>
+<text x="400" y="408" xml:space="preserve"><tspan class="k">. Repos: </tspan><tspan class="v" id="repo_data">25</tspan><tspan class="k"> (Contributed: </tspan><tspan class="v" id="contrib_data">9</tspan><tspan class="k">) | Stars: </tspan><tspan class="v" id="star_data">3</tspan></text>
+<text x="400" y="426" xml:space="preserve"><tspan class="k">. Commits: </tspan><tspan class="d" id="commit_dots">.............................</tspan> <tspan class="v" id="commit_data">83</tspan><tspan class="k"> | Followers: </tspan><tspan class="v" id="follower_data">2</tspan></text>
+<text x="400" y="444" xml:space="preserve"><tspan class="k">. Lines of Code on GitHub: </tspan><tspan class="v" id="loc_data">910,775</tspan><tspan class="v"> ( </tspan><tspan class="add" id="loc_add">2,206,150++</tspan><tspan class="v">, </tspan><tspan class="del" id="loc_del">1,295,375--</tspan><tspan class="v"> )</tspan></text>
+</g>
+</svg>
