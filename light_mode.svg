@@ -48,7 +48,7 @@
 <g class="panel">
 <text x="400" y="60" xml:space="preserve"><tspan class="k">askenter@github</tspan> <tspan class="rule">────────────────────────────</tspan></text>
 <text x="400" y="84" xml:space="preserve"><tspan class="k">. OS: </tspan><tspan class="d">................</tspan><tspan class="v"> macOS, Linux</tspan></text>
-<text x="400" y="102" xml:space="preserve"><tspan class="k">. Uptime: </tspan><tspan class="d" id="age_dots">.....................</tspan> <tspan class="v" id="age_data">24 years, 3 months, 2 days</tspan></text>
+<text x="400" y="102" xml:space="preserve"><tspan class="k">. Uptime: </tspan><tspan class="d" id="age_dots">.....................</tspan> <tspan class="v" id="age_data">24 years, 3 months, 3 days</tspan></text>
 <text x="400" y="120" xml:space="preserve"><tspan class="k">. Host: </tspan><tspan class="d">..............</tspan><tspan class="v"> Aevori (Founder)</tspan></text>
 <text x="400" y="138" xml:space="preserve"><tspan class="k">. Kernel: </tspan><tspan class="d">............</tspan><tspan class="v"> Aerospace MEng, Imperial College London</tspan></text>
 <text x="400" y="156" xml:space="preserve"><tspan class="k">. IDE: </tspan><tspan class="d">...............</tspan><tspan class="v"> VS Code, Claude Code</tspan></text>
